@@ -4,10 +4,11 @@
 <body>
 <a class="back" href="../index.html">← Atpakaļ</a>
 <header><h1>🌍 Latviešu valodas pasaule</h1><p class="subtitle">Vārdi un teikumi</p></header>
-<div class="container">
+<main><div class="container">
 <div style="background:#fff;border-radius:14px;height:12px;overflow:hidden;margin-bottom:16px"><div id="bar" style="height:100%;width:0%;background:linear-gradient(90deg,#f97316,#ec4899);transition:width .4s"></div></div>
 <div class="game"><h3 id="q"></h3><div class="options" id="opts"></div><div class="feedback" id="fb"></div><p id="score" style="margin-top:8px;font-weight:700">Punkti: 0</p></div>
 </div>
+</main>
 <script src="../js/speech.js"></script>
 <script src="../js/app.js"></script>
 <script>WORLDS.valodas=[{q:'Kurš vārds nozīmē "māja"?',opts:[{t:'māja',c:true},{t:'koks',c:false},{t:'upe',c:false}]},{q:'Kurš ir lietvārds?',opts:[{t:'kaķis',c:true},{t:'skriet',c:false},{t:'zils',c:false}]},{q:'Kurš ir darbības vārds?',opts:[{t:'skriet',c:true},{t:'māja',c:false},{t:'liels',c:false}]},{q:'Kurš teikums ir pareizs?',opts:[{t:'Suns skrien.',c:true},{t:'Skrien suns.',c:false},{t:'Suns.',c:false}]}];document.addEventListener('DOMContentLoaded',()=>initQuiz('valodas'));</script>

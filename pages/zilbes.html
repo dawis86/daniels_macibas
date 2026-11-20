@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zilbju piedzīvojums</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/animations.css">
+<style>
+.zilbe{font-size:clamp(3rem,12vw,8rem);font-weight:900;letter-spacing:.05em;padding:1.2rem 2rem;border-radius:28px;background:linear-gradient(135deg,#fde68a,#fca5a5);box-shadow:0 12px 30px rgba(0,0,0,.15);display:inline-block;margin:.5rem;cursor:pointer;transition:transform .15s}
+.zilbe:active{transform:scale(.92)}
+.zona{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1rem;min-height:40vh;padding:2rem}
+.vards{font-size:clamp(4rem,14vw,10rem);font-weight:900;background:linear-gradient(90deg,#f97316,#ec4899,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent;margin:1rem 0}
+.attels{font-size:clamp(5rem,16vw,12rem);line-height:1}
+</style>
+</head>
+<body>
+<a class="back" href="../index.html">← Atpakaļ</a>
+<header><h1>🧩 Zilbju piedzīvojums</h1><p class="subtitle">Mācies zilbes un vārdus</p></header>
+<div class="container">
+<div class="game">
+<h3 id="q">Noklausies zilbi un izvēlies pareizo!</h3>
+<div class="zona" id="opts"></div>
+<div class="feedback" id="fb"></div>
+<p id="score" style="margin-top:8px;font-weight:700">Punkti: 0</p>
+</div>
+</div>
+<script src="../js/speech.js"></script>
+<script src="../js/audio.js"></script>
+<script src="../js/app.js"></script>
+<script>
+const ZILBES=[
+ {q:'Kura zilbe ir "MA"?',opts:[{t:'MA',c:true},{t:'MO',c:false},{t:'ME',c:false}]},
+ {q:'Kura zilbe ir "SA"?',opts:[{t:'SA',c:true},{t:'SE',c:false},{t:'SI',c:false}]},
+ {q:'Kura zilbe ir "LA"?',opts:[{t:'LA',c:true},{t:'LO',c:false},{t:'LU',c:false}]},
+ {q:'Kura zilbe ir "PA"?',opts:[{t:'PA',c:true},{t:'PE',c:false},{t:'PI',c:false}]},
+ {q:'Kura zilbe ir "KA"?',opts:[{t:'KA',c:true},{t:'KO',c:false},{t:'KU',c:false}]},
+ {q:'Kura zilbe ir "RA"?',opts:[{t:'RA',c:true},{t:'RE',c:false},{t:'RI',c:false}]}
+];
+let zi=0,zscore=0,zlocked=false;
+const qEl=document.getElementById('q'),optsEl=document.getElementById('opts'),fb=document.getElementById('fb'),sc=document.getElementById('score');
+function renderZ(){zlocked=false;const q=ZILBES[zi%ZILBES.length];qEl.textContent=q.q;optsEl.innerHTML='';fb.textContent='';window.speakLatvian(q.q);q.opts.forEach(o=>{const b=document.createElement('div');b.className='zilbe';b.textContent=o.t;b.onclick=()=>{if(zlocked)return;zlocked=true;if(o.c){b.style.background='linear-gradient(135deg,#86efac,#4ade80)';fb.textContent='✅ Pareizi! Lieliski!';fb.style.color='#16a34a';zscore++;if(window.AUDIO)window.AUDIO.correct();confetti(b);window.speakLatvian('Pareizi! '+o.t)}else{b.style.background='linear-gradient(135deg,#fca5a5,#f87171)';fb.textContent='❌ Mēģini vēlreiz!';fb.style.color='#dc2626';if(window.AUDIO)window.AUDIO.wrong();window.speakLatvian('Mēģini vēlreiz!');zlocked=false;return}sc.textContent='Punkti: '+zscore;setTimeout(()=>{zi++;if(zi<ZILBES.length)renderZ();else{qEl.textContent='Pabeigts! Punkti: '+zscore+'/'+ZILBES.length;optsEl.innerHTML='';window.speakLatvian('Apsveicu! Tu pabeidzi zilbju piedzīvojumu!')}},1300)};optsEl.appendChild(b)})}renderZ();
+</script>
+</body></html>

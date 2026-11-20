@@ -1,0 +1,1 @@
+window.SITE_CONFIG={name:'Bērnu zināšanu pasaule',lang:'lv-LV',version:'1.0',soundEnabled:true,speechEnabled:true,motionReduced:false,levels:['A','B','C','D','E'],worlds:['burti','matematika','logika','daba','radosums','ikdiena','valodas','programmesana','laboratorija']};

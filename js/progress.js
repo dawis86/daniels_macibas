@@ -1,0 +1,1 @@
+window.PROGRESS=window.PROGRESS||{save(w,s){window.STORAGE&&window.STORAGE.set(Object.assign(window.STORAGE.get(),{[w+'_score']:s}))},load(){return window.STORAGE?window.STORAGE.get():{}}};

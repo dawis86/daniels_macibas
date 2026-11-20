@@ -1,0 +1,1 @@
+window.SPEECH={muted:false,speak(t){if(this.muted)return;try{const u=new SpeechSynthesisUtterance(t);u.lang='lv-LV';speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}},toggle(){this.muted=!this.muted;return this.muted},repeat(t){this.speak(t)}};

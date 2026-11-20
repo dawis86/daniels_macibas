@@ -1,0 +1,1 @@
+window.FEEDBACK={correct(){return'✅ Pareizi! Lieliski!'},wrong(){return'❌ Mēģini vēlreiz!'},encourage(){return'Tu vari! Mēģini vēlreiz!'}};

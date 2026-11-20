@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Radošuma pasaule</title><link rel="stylesheet" href="../css/style.css"></head>
+<body>
+<a class="back" href="../index.html">← Atpakaļ</a>
+<header><h1>🎨 Radošuma pasaule</h1><p class="subtitle">Krāsas un formas</p></header>
+<div class="container">
+<div style="background:#fff;border-radius:14px;height:12px;overflow:hidden;margin-bottom:16px"><div id="bar" style="height:100%;width:0%;background:linear-gradient(90deg,#f97316,#ec4899);transition:width .4s"></div></div>
+<div class="game"><h3 id="q"></h3><div class="options" id="opts"></div><div class="feedback" id="fb"></div><p id="score" style="margin-top:8px;font-weight:700">Punkti: 0</p></div>
+</div>
+<script src="../js/app.js"></script>
+<script>WORLDS.radosums=[{q:'Kura krāsa ir sarkana?',opts:[{t:'🔴',c:true},{t:'🔵',c:false},{t:'🟢',c:false}]},{q:'Kura forma ir aplis?',opts:[{t:'⭕',c:true},{t:'⬜',c:false},{t:'🔺',c:false}]},{q:'Kura krāsa ir zila?',opts:[{t:'🔵',c:true},{t:'🟡',c:false},{t:'🔴',c:false}]},{q:'Kura forma ir kvadrāts?',opts:[{t:'⬜',c:true},{t:'⭕',c:false},{t:'🔺',c:false}]}];document.addEventListener('DOMContentLoaded',()=>initQuiz('radosums'));</script>
+</body></html>

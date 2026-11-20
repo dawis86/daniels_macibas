@@ -1,0 +1,1 @@
+window.TEXTS={appTitle:'Bērnu zināšanu pasaule',back:'Atpakaļ',correct:'Pareizi! Lieliski!',wrong:'Mēģini vēlreiz!',points:'Punkti',mute:'Izslēgt balsi',unmute:'Ieslēgt balsi',repeat:'Atkārtot',next:'Tālāk',prev:'Atpakaļ'};function t(k){return window.TEXTS[k]||k}

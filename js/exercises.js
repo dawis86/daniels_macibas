@@ -1,0 +1,1 @@
+window.EXERCISES={pick(arr){return arr[Math.floor(Math.random()*arr.length)]},check(btn,correct,cb){if(correct){btn.classList.add('correct');cb(true)}else{btn.classList.add('wrong');cb(false)}}};

@@ -1,0 +1,1 @@
+window.PROGRESS=window.PROGRESS||{save(w,s){},load(){return{}}};document.addEventListener('DOMContentLoaded',()=>{if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)document.body.classList.add('reduce-motion')});

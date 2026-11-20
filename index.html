@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KIDVERSE — interaktīva mācību pasaule</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:linear-gradient(135deg,#fff7ed,#e0f2fe,#f0fdf4);min-height:100vh;color:#1e293b}
+header{padding:32px 20px;text-align:center}
+h1{font-size:2.6rem;background:linear-gradient(90deg,#f97316,#ec4899,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{color:#475569;margin-top:8px;font-size:1.1rem}
+.worlds{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:1000px;margin:20px auto;padding:0 20px}
+.card{background:#fff;border-radius:22px;padding:24px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.08);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 32px rgba(0,0,0,.12)}
+.card .icon{font-size:3rem;margin-bottom:10px}
+.card h2{font-size:1.2rem;margin-bottom:6px}
+.card p{color:#64748b;font-size:.9rem}
+.games{max-width:1000px;margin:30px auto;padding:0 20px}
+.games h2{margin-bottom:14px}
+.game{background:#fff;border-radius:18px;padding:20px;margin-bottom:14px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.game h3{margin-bottom:8px}
+.options{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.btn{border:none;border-radius:12px;padding:10px 18px;font-size:1rem;cursor:pointer;background:#e2e8f0;transition:background .2s}
+.btn:hover{background:#cbd5e1}
+.btn.correct{background:#86efac}
+.btn.wrong{background:#fca5a5}
+.feedback{margin-top:10px;font-weight:600;min-height:24px}
+footer{text-align:center;padding:30px;color:#94a3b8;font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+<h1>🌟 KIDVERSE</h1>
+<p class="subtitle">Interaktīva mācību pasaule 6 gadus veciem bērniem</p>
+</header>
+<div class="worlds">
+<div class="card"><div class="icon">🔤</div><h2>Burtu pasaule</h2><p>Lasīšana un rakstīšana</p></div>
+<div class="card"><div class="icon">🔢</div><h2>Matemātikas pasaule</h2><p>Skaitļi un darbības</p></div>
+<div class="card"><div class="icon">🧩</div><h2>Loģikas pasaule</h2><p>Domāšana un atmiņa</p></div>
+<div class="card"><div class="icon">🌿</div><h2>Dabas pasaule</h2><p>Dzīvnieki un daba</p></div>
+<div class="card"><div class="icon">🌍</div><h2>Valodu pasaule</h2><p>Angļu valoda</p></div>
+<div class="card"><div class="icon">🏠</div><h2>Ikdienas pasaule</h2><p>Laiks un nauda</p></div>
+</div>
+<div class="games">
+<h2>🎮 Izmēģini uzdevumus</h2>
+<div class="game">
+<h3>Cik ir 2 + 3?</h3>
+<div class="options">
+<button class="btn" onclick="ans(this,4)">4</button>
+<button class="btn" onclick="ans(this,5)">5</button>
+<button class="btn" onclick="ans(this,6)">6</button>
+</div>
+<div class="feedback" id="f1"></div>
+</div>
+<div class="game">
+<h3>Kurš ir kaķis?</h3>
+<div class="options">
+<button class="btn" onclick="ans2(this,'cat')">🐱</button>
+<button class="btn" onclick="ans2(this,'dog')">🐶</button>
+<button class="btn" onclick="ans2(this,'fish')">🐟</button>
+</div>
+<div class="feedback" id="f2"></div>
+</div>
+</div>
+<footer>KIDVERSE — bezmaksas mācību vietne bērniem · 2026</footer>
+<script>
+function ans(b,v){const f=document.getElementById('f1');if(v===5){b.classList.add('correct');f.textContent='✅ Pareizi!';f.style.color='#16a34a'}else{b.classList.add('wrong');f.textContent='❌ Mēģini vēl!';f.style.color='#dc2626'}}
+function ans2(b,v){const f=document.getElementById('f2');if(v==='cat'){b.classList.add('correct');f.textContent='✅ Pareizi!';f.style.color='#16a34a'}else{b.classList.add('wrong');f.textContent='❌ Mēģini vēl!';f.style.color='#dc2626'}}
+</script>
+</body>
+</html>

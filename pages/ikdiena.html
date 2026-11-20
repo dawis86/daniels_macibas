@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ikdienas pasaule</title><link rel="stylesheet" href="../css/style.css"></head>
+<body>
+<a class="back" href="../index.html">← Atpakaļ</a>
+<header><h1>🏠 Ikdienas pasaule</h1><p class="subtitle">Laiks un nauda</p></header>
+<div class="container">
+<div class="game"><h3>Cikos bērni parasti iet gulēt?</h3><div class="options">
+<button class="btn" onclick="answer(this,false,'f1')">Pusdienlaikā</button>
+<button class="btn" onclick="answer(this,true,'f1')">Vakarā</button>
+<button class="btn" onclick="answer(this,false,'f1')">Rītā</button>
+</div><div class="feedback" id="f1"></div></div>
+<div class="game"><h3>Kurš ir dārgāks?</h3><div class="options">
+<button class="btn" onclick="answer(this,true,'f2')">Rotaļlieta</button>
+<button class="btn" onclick="answer(this,false,'f2')">Ābols</button>
+</div><div class="feedback" id="f2"></div></div>
+</div>
+<script src="../js/app.js"></script>
+</body></html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Loģikas pasaule</title><link rel="stylesheet" href="../css/style.css"></head>
+<body>
+<a class="back" href="../index.html">← Atpakaļ</a>
+<header><h1>🧩 Loģikas pasaule</h1><p class="subtitle">Domāšana un atmiņa</p></header>
+<div class="container">
+<div class="game"><h3>Kas neder?</h3><div class="options">
+<button class="btn" onclick="answer(this,false,'f1')">🍎</button>
+<button class="btn" onclick="answer(this,false,'f1')">🍌</button>
+<button class="btn" onclick="answer(this,true,'f1')">🚗</button>
+</div><div class="feedback" id="f1"></div></div>
+<div class="game"><h3>Kurš ir nākamais? 🔴🔵🔴🔵 ?</h3><div class="options">
+<button class="btn" onclick="answer(this,true,'f2')">🔴</button>
+<button class="btn" onclick="answer(this,false,'f2')">🔵</button>
+<button class="btn" onclick="answer(this,false,'f2')">🟢</button>
+</div><div class="feedback" id="f2"></div></div>
+</div>
+<script src="../js/app.js"></script>
+</body></html>

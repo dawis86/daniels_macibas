@@ -1,0 +1,2 @@
+function answer(btn, isCorrect, feedbackId){const f=document.getElementById(feedbackId);if(isCorrect){btn.classList.add('correct');f.textContent='✅ Pareizi! Lieliski!';f.style.color='#16a34a'}else{btn.classList.add('wrong');f.textContent='❌ Mēģini vēlreiz!';f.style.color='#dc2626'}}
+function resetFeedback(id){const f=document.getElementById(id);if(f){f.textContent='';f.className='feedback'}}

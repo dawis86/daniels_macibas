@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Matemātikas pasaule</title><link rel="stylesheet" href="../css/style.css"></head>
+<body>
+<a class="back" href="../index.html">← Atpakaļ</a>
+<header><h1>🔢 Matemātikas pasaule</h1><p class="subtitle">Skaitļi un darbības</p></header>
+<div class="container">
+<div class="game"><h3>Cik ir 5 - 2?</h3><div class="options">
+<button class="btn" onclick="answer(this,false,'f1')">2</button>
+<button class="btn" onclick="answer(this,true,'f1')">3</button>
+<button class="btn" onclick="answer(this,false,'f1')">4</button>
+</div><div class="feedback" id="f1"></div></div>
+<div class="game"><h3>Kurš skaitlis ir lielākais?</h3><div class="options">
+<button class="btn" onclick="answer(this,false,'f2')">3</button>
+<button class="btn" onclick="answer(this,true,'f2')">7</button>
+<button class="btn" onclick="answer(this,false,'f2')">5</button>
+</div><div class="feedback" id="f2"></div></div>
+</div>
+<script src="../js/app.js"></script>
+</body></html>

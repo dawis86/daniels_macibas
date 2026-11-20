@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Dabas pasaule</title><link rel="stylesheet" href="../css/style.css"></head>
+<body>
+<a class="back" href="../index.html">← Atpakaļ</a>
+<header><h1>🌿 Dabas pasaule</h1><p class="subtitle">Dzīvnieki un daba</p></header>
+<div class="container">
+<div class="game"><h3>Kurš ir suns?</h3><div class="options">
+<button class="btn" onclick="answer(this,true,'f1')">🐶</button>
+<button class="btn" onclick="answer(this,false,'f1')">🐱</button>
+<button class="btn" onclick="answer(this,false,'f1')">🐰</button>
+</div><div class="feedback" id="f1"></div></div>
+<div class="game"><h3>Kur dzīvo zivs?</h3><div class="options">
+<button class="btn" onclick="answer(this,true,'f2')">Ezerā</button>
+<button class="btn" onclick="answer(this,false,'f2')">Mežā</button>
+<button class="btn" onclick="answer(this,false,'f2')">Dārzā</button>
+</div><div class="feedback" id="f2"></div></div>
+</div>
+<script src="../js/app.js"></script>
+</body></html>
